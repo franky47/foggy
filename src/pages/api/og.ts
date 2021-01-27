@@ -55,6 +55,9 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     const result = await processFigmaURL(url)
     res.redirect(result)
   } catch (error) {
+    Sentry.setExtras({
+      figmaURL: url,
+    })
     Sentry.captureException(error)
     res.status(400).json({
       error: error.message,
