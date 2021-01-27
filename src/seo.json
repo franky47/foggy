@@ -1,0 +1,28 @@
+{
+  "title": "Foggy",
+  "description": "Generate OpenGraph images from Figma in one click",
+  "additionalMetaTags": [
+    { "property": "author", "content": "François Best" },
+    {
+      "property": "keywords",
+      "content": "figma,opengraph,open-graph,social-images,jamstack"
+    }
+  ],
+  "twitter": {
+    "cardType": "summary_large_image",
+    "handle": "fortysevenfx",
+    "site": "fortysevenfx"
+  },
+  "openGraph": {
+    "type": "website",
+    "locale": "en-GB",
+    "site_name": "Foggy",
+    "images": [
+      {
+        "url": "https://usefoggy.vercel.app/api/og?url=https://www.figma.com/file/LCzKwbepwQ5MaPwDJ8FCUsRo/francoisbest.com?node-id=591%3A2",
+        "width": 1280,
+        "height": 720
+      }
+    ]
+  }
+}
