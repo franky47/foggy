@@ -97,7 +97,7 @@ export default function Home() {
           <ListItem>
             Copy your Figma frame URL:
             <br />
-            <Box as="video" rounded="md" autoPlay loop mt={2} mb={4}>
+            <Box as="video" rounded="md" controls loop mt={2} mb={4}>
               <source src="/figma-link-demo.webm" type="video/webm" />
               <source src="/figma-link-demo.mp4" type="video/mp4" />
               Sorry, your browser doesn't support embedded videos.
