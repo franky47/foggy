@@ -14,10 +14,10 @@ import { FiGithub } from 'react-icons/fi'
 
 export default function Home() {
   return (
-    <Container as="main" maxW="6xl" my={12}>
+    <Container as="main" maxW="6xl" mt={[2, null, 12]}>
       {/* -- Nav -- */}
-      <Flex as="nav" my={8}>
-        <Heading as="h1" fontSize="2xl">
+      <Flex as="nav" alignItems="center">
+        <Heading as="h1" fontSize="2xl" my={0}>
           🌁 Foggy
         </Heading>
         <IconButtonOutgoingLink
@@ -34,19 +34,35 @@ export default function Home() {
       <Heading
         as="h2"
         textAlign="center"
-        bgGradient="linear(to-r, purple.500,pink.500)"
-        bgClip="text"
-        fontSize="6xl"
+        fontSize={['5xl', null, '6xl']}
+        lineHeight={[1.1, null, 1.27]}
+        p={2}
         fontWeight="extrabold"
-        mt={24}
+        mt={[12, null, 24]}
       >
-        Generate OpenGraph images with Figma in one click
+        Generate{' '}
+        <Text
+          as="span"
+          bgGradient="linear(to-r, purple.500,pink.500)"
+          bgClip="text"
+        >
+          OpenGraph
+        </Text>{' '}
+        images with{' '}
+        <Text
+          as="span"
+          bgGradient="linear(to-r, teal.500,cyan.500)"
+          bgClip="text"
+        >
+          Figma
+        </Text>{' '}
+        in one click
       </Heading>
       <Box as="section" maxW="3xl" mx="auto">
         <Svg
           viewBox="0 0 33.8556496484357 181.2801757144611"
-          width="33.8556496484357px"
-          height="181.2801757144611px"
+          width={[6, null, 8]}
+          // height="181px"
           mx="auto"
         >
           <g>
@@ -77,7 +93,7 @@ export default function Home() {
             </g>
           </g>
         </Svg>
-        <OrderedList spacing={4} fontSize="lg">
+        <OrderedList spacing={8} fontSize="lg" fontWeight="semibold">
           <ListItem>
             Copy your Figma frame URL:
             <br />
@@ -91,15 +107,30 @@ export default function Home() {
             </Box>
           </ListItem>
           <ListItem>
-            Prepend it with <Code>https://usefoggy.vercel.app/api/og?url=</Code>
+            Prepend it with:
+            <br />
+            <Code fontWeight="normal">
+              https://usefoggy.vercel.app/api/og?url=
+            </Code>
           </ListItem>
-          <ListItem>Use it for your OpenGraph image URL</ListItem>
+          <ListItem>
+            Use it for your OpenGraph image URL:
+            <br />
+            <Box as="pre" overflowX="auto" mt={1} fontWeight="normal">
+              <Code py={1} px={2} w="100%">
+                {`<meta
+  property="og:image"
+  content="https://usefoggy.vercel.app/api/og?url={yourFigmaURLHere}"
+/>`}
+              </Code>
+            </Box>
+          </ListItem>
           <ListItem>
             That's it ! The image will follow your design updates.
           </ListItem>
         </OrderedList>
       </Box>
-      <Box as="p" textAlign="center" mt={24}>
+      <Text textAlign="center" mt={24}>
         I'm building this micro-SaaS in the open,{' '}
         <OutgoingLink
           href="https://twitter.com/fortysevenfx/status/1354351589000171521"
@@ -108,16 +139,15 @@ export default function Home() {
           follow my progress on Twitter
         </OutgoingLink>
         .
-      </Box>
-      <Flex as="footer" fontSize="sm" color="gray.500" my={8}>
-        <Text>
+      </Text>
+      <Box as="footer" fontSize="sm" color="gray.500" my={8}>
+        <Text textAlign="center">
           Made with ❤️ by{' '}
           <OutgoingLink href="https://francoisbest.com" textDecor="underline">
             François Best
           </OutgoingLink>
         </Text>
-        <Text ml="auto">Copyright © François Best 2021</Text>
-      </Flex>
+      </Box>
     </Container>
   )
 }
