@@ -14,7 +14,16 @@ by slightly modifying the Figma URL.
 
 The project is made with [Next.js](https://nextjs.org/), and hosted on [Vercel](https://vercel.com).
 
-> Todo: add "Deploy on Vercel" button for self-hosting.
+## Self-hosting
+
+You can deploy this project to your own Vercel account:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ffranky47%2Ffoggy&env=FIGMA_ACCESS_TOKEN&envDescription=Create%20a%20personal%20access%20token%20for%20Figma&envLink=https%3A%2F%2Fwww.figma.com%2Fdevelopers%2Fapi%23authentication)
+
+### Environment Variables
+
+- `FIGMA_ACCESS_TOKEN`: [Create a personal access token](https://www.figma.com/developers/api#access-tokens) in your Figma account settings.
+- `SENTRY_DSN` _(optional)_: Pass in a DSN to enable error monitoring with [Sentry](https://sentry.io).
 
 ## Misc
 
