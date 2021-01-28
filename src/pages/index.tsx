@@ -10,6 +10,7 @@ import {
   Code,
   HStack,
   Divider,
+  useBreakpointValue,
 } from '@chakra-ui/react'
 import { IconButtonOutgoingLink, OutgoingLink, Svg } from '@47ng/chakra-next'
 import { FiGithub, FiTwitter } from 'react-icons/fi'
@@ -28,6 +29,7 @@ export default function Home() {
             to="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ffranky47%2Ffoggy&env=FIGMA_ACCESS_TOKEN&envDescription=Create%20a%20personal%20access%20token%20for%20Figma&envLink=https%3A%2F%2Fwww.figma.com%2Fdevelopers%2Fapi%23access-tokens"
             variant="ghost"
             ml="auto"
+            size={useBreakpointValue(['sm', 'md'])}
           />
           <IconButtonOutgoingLink
             icon={<FiGithub />}
