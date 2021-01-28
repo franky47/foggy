@@ -8,57 +8,76 @@ import {
   Flex,
   Heading,
   Code,
+  HStack,
+  Divider,
 } from '@chakra-ui/react'
 import { IconButtonOutgoingLink, OutgoingLink, Svg } from '@47ng/chakra-next'
-import { FiGithub } from 'react-icons/fi'
+import { FiGithub, FiTwitter } from 'react-icons/fi'
+import { VercelDeployButton } from 'src/components/VercelDeployButton'
 
 export default function Home() {
   return (
-    <Container as="main" maxW="6xl" mt={[2, null, 12]}>
-      {/* -- Nav -- */}
-      <Flex as="nav" alignItems="center">
-        <Heading as="h1" fontSize="2xl" my={0}>
-          🌁 Foggy
+    <>
+      <Container as="header" maxW="6xl" mt={[2, null, 12]}>
+        {/* -- Nav -- */}
+        <Flex as="nav" alignItems="center">
+          <Heading as="h1" fontSize="2xl" my={0}>
+            🌁 Foggy
+          </Heading>
+          <VercelDeployButton
+            to="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ffranky47%2Ffoggy&env=FIGMA_ACCESS_TOKEN&envDescription=Create%20a%20personal%20access%20token%20for%20Figma&envLink=https%3A%2F%2Fwww.figma.com%2Fdevelopers%2Fapi%23access-tokens"
+            variant="ghost"
+            ml="auto"
+          />
+          <IconButtonOutgoingLink
+            icon={<FiGithub />}
+            aria-label="GitHub"
+            href="https://github.com/franky47/foggy"
+            size="lg"
+            variant="ghost"
+            rounded="full"
+          />
+          <IconButtonOutgoingLink
+            icon={<FiTwitter />}
+            aria-label="Twitter"
+            href="https://twitter.com/fortysevenfx/status/1354351589000171521"
+            size="lg"
+            variant="ghost"
+            rounded="full"
+          />
+        </Flex>
+      </Container>
+      <Container as="section" maxW="6xl">
+        {/* -- Hero -- */}
+        <Heading
+          as="h2"
+          textAlign="center"
+          fontSize={['5xl', null, '6xl']}
+          lineHeight={[1.1, null, 1.27]}
+          p={2}
+          fontWeight="extrabold"
+          mt={[12, null, 24]}
+        >
+          Generate{' '}
+          <Text
+            as="span"
+            bgGradient="linear(to-r, purple.500,pink.500)"
+            bgClip="text"
+          >
+            OpenGraph
+          </Text>{' '}
+          images with{' '}
+          <Text
+            as="span"
+            bgGradient="linear(to-r, teal.500,cyan.500)"
+            bgClip="text"
+          >
+            Figma
+          </Text>{' '}
+          in one click
         </Heading>
-        <IconButtonOutgoingLink
-          ml="auto"
-          icon={<FiGithub />}
-          aria-label="GitHub"
-          href="https://github.com/franky47/foggy"
-          size="lg"
-          variant="ghost"
-          rounded="full"
-        />
-      </Flex>
-      {/* -- Hero -- */}
-      <Heading
-        as="h2"
-        textAlign="center"
-        fontSize={['5xl', null, '6xl']}
-        lineHeight={[1.1, null, 1.27]}
-        p={2}
-        fontWeight="extrabold"
-        mt={[12, null, 24]}
-      >
-        Generate{' '}
-        <Text
-          as="span"
-          bgGradient="linear(to-r, purple.500,pink.500)"
-          bgClip="text"
-        >
-          OpenGraph
-        </Text>{' '}
-        images with{' '}
-        <Text
-          as="span"
-          bgGradient="linear(to-r, teal.500,cyan.500)"
-          bgClip="text"
-        >
-          Figma
-        </Text>{' '}
-        in one click
-      </Heading>
-      <Box as="section" maxW="3xl" mx="auto">
+      </Container>
+      <Container as="section" maxW="3xl">
         <Svg
           viewBox="0 0 33.8556496484357 181.2801757144611"
           width={[6, null, 8]}
@@ -129,25 +148,36 @@ export default function Home() {
             That's it ! The image will follow your design updates.
           </ListItem>
         </OrderedList>
-      </Box>
-      <Text textAlign="center" mt={24}>
-        I'm building this micro-SaaS in the open,{' '}
-        <OutgoingLink
-          href="https://twitter.com/fortysevenfx/status/1354351589000171521"
-          textDecor="underline"
-        >
-          follow my progress on Twitter
-        </OutgoingLink>
-        .
-      </Text>
-      <Box as="footer" fontSize="sm" color="gray.500" my={8}>
+      </Container>
+      <Divider mt={12} />
+      <Container as="section" maxW="3xl" my={12}>
+        <HStack>
+          <Text>Self-host this project:</Text>
+          <VercelDeployButton
+            to="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ffranky47%2Ffoggy&env=FIGMA_ACCESS_TOKEN&envDescription=Create%20a%20personal%20access%20token%20for%20Figma&envLink=https%3A%2F%2Fwww.figma.com%2Fdevelopers%2Fapi%23authentication"
+            size="sm"
+            variant="outline"
+          />
+        </HStack>
+        <Text mt={4}>
+          I'm building this micro-SaaS in the open,{' '}
+          <OutgoingLink
+            href="https://twitter.com/fortysevenfx/status/1354351589000171521"
+            textDecor="underline"
+          >
+            follow my progress on Twitter
+          </OutgoingLink>
+          .
+        </Text>
+      </Container>
+      <Container as="footer" fontSize="sm" color="gray.500" my={8}>
         <Text textAlign="center">
           Made with ❤️ by{' '}
           <OutgoingLink href="https://francoisbest.com" textDecor="underline">
             François Best
           </OutgoingLink>
         </Text>
-      </Box>
-    </Container>
+      </Container>
+    </>
   )
 }
