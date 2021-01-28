@@ -8,7 +8,7 @@ import '@sentry/tracing'
 interface FigmaAPIResult {
   err: null | string
   images: {
-    [key: string]: string
+    [key: string]: string | null
   }
 }
 
@@ -53,6 +53,9 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
   })
   try {
     const result = await processFigmaURL(url)
+    if (!result) {
+      throw new Error('Figma failed to render the image')
+    }
     res.redirect(result)
   } catch (error) {
     Sentry.setExtras({
