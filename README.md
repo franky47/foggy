@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌁 Foggy
 
-## Getting Started
+> Generate OpenGraph images from Figma designs in one click
 
-First, run the development server:
+https://usefoggy.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## How it works
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The [Figma API](https://www.figma.com/developers/api) provides an [endpoint to generate images](https://www.figma.com/developers/api#get-images-endpoint) from a Frame URL.
+Images are saved on an Amazon S3 bucket with a public URL.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This project provides a thin API layer to resolve to those public URLs
+by slightly modifying the Figma URL.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The project is made with [Next.js](https://nextjs.org/), and hosted on [Vercel](https://vercel.com).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+> Todo: add "Deploy on Vercel" button for self-hosting.
 
-## Learn More
+## Misc
 
-To learn more about Next.js, take a look at the following resources:
+_Why Foggy?_ Figma Open Graph Generator, Yay !
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Made with ❤️ by [François Best](https://francoisbest.com).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Using this at work ? [Sponsor me](https://github.com/sponsors/franky47) to help with support and maintenance.
