@@ -2,6 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import got from 'got'
 import * as Sentry from '@sentry/node'
 import '@sentry/tracing'
+import { collectMetrics } from 'src/lib/metrics'
+import { performance } from 'perf_hooks'
 
 // --
 
@@ -46,6 +48,7 @@ export async function processFigmaURL(figmaURL: string) {
 // --
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
+  const tick = performance.now()
   const url = req.query.url as string
   const tx = Sentry.startTransaction({
     op: 'processFigmaURL',
@@ -67,5 +70,11 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     })
   } finally {
     tx.finish()
+    const tock = performance.now()
+    collectMetrics({
+      duration: tock - tick,
+      headers: req.headers,
+      figmaFile: url,
+    })
   }
 }
