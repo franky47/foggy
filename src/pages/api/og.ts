@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import got from 'got'
 import * as Sentry from '@sentry/node'
 import '@sentry/tracing'
-import { collectMetrics } from 'src/lib/metrics'
 import { performance } from 'perf_hooks'
 
 // --
@@ -69,12 +68,15 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       error: error.message,
     })
   } finally {
-    tx.finish()
     const tock = performance.now()
-    collectMetrics({
+    tx.data = {
+      ...tx.data,
       duration: tock - tick,
-      headers: req.headers,
+      agent: req.headers['user-agent'],
+      referer: req.headers.referer,
+      origin: req.headers.origin,
       figmaFile: url,
-    })
+    }
+    tx.finish()
   }
 }
