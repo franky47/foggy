@@ -1,5 +1,8 @@
 # 🌁 Foggy
 
+[![MIT License](https://img.shields.io/github/license/47ng/cloak.svg?color=blue)](https://github.com/47ng/cloak/blob/next/LICENSE)
+[![Depfu](https://badges.depfu.com/badges/9db2edf08202152d1fe7dfe8c944150b/count.svg)](https://depfu.com/github/franky47/foggy?project_id=22353)
+
 > Generate OpenGraph images from Figma designs in one click
 
 https://usefoggy.vercel.app
@@ -29,6 +32,6 @@ You can deploy this project to your own Vercel account:
 
 _Why Foggy?_ Figma Open Graph Generator, Yay !
 
-Made with ❤️ by [François Best](https://francoisbest.com).
+License: [MIT](https://github.com/47ng/cloak/blob/master/LICENSE) - Made with ❤️ by [François Best](https://francoisbest.com).
 
 Using this at work ? [Sponsor me](https://github.com/sponsors/franky47) to help with support and maintenance.
