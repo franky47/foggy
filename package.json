@@ -16,11 +16,11 @@
     "@sentry/tracing": "^6.0.2",
     "framer-motion": "^3.2.2-rc.1",
     "got": "^11.8.1",
-    "next": "10.0.5",
+    "next": "^10.0.5",
     "next-seo": "^4.17.0",
     "next-transpile-modules": "^6.0.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-icons": "^4.1.0"
   },
   "devDependencies": {
