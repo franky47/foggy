@@ -23,6 +23,9 @@ export async function pushStatsToRedis(meta: APICallMeta) {
 }
 
 export async function getStats(): Promise<Stats> {
+  if (!process.env.REDIS_URI) {
+    return { hitCount: 0, files: 0 }
+  }
   const redis = new Redis(process.env.REDIS_URI)
   const [hits, files] = await Promise.all([
     redis.get('foggy:api:hits'),
