@@ -1,8 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import got from 'got'
 import * as Sentry from '@sentry/node'
 import '@sentry/tracing'
+import got from 'got'
+import type { NextApiRequest, NextApiResponse } from 'next'
 import { performance } from 'perf_hooks'
+import { pushStatsToRedis } from 'src/server/redis'
 
 // --
 
@@ -59,14 +60,20 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       throw new Error('Figma failed to render the image')
     }
     res.redirect(result)
+    await pushStatsToRedis({
+      agent: req.headers['user-agent'] ?? 'Unknown',
+      file: url,
+    })
   } catch (error) {
     Sentry.setExtras({
       figmaURL: url,
     })
     Sentry.captureException(error)
-    res.status(400).json({
-      error: error.message,
-    })
+    if (!res.headersSent) {
+      res.status(400).json({
+        error: error.message,
+      })
+    }
   } finally {
     const tock = performance.now()
     tx.data = {

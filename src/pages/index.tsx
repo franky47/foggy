@@ -1,19 +1,20 @@
-import React from 'react'
+import { IconButtonOutgoingLink, OutgoingLink, Svg } from '@47ng/chakra-next'
 import {
   Box,
-  Text,
+  Code,
   Container,
-  OrderedList,
-  ListItem,
+  Divider,
   Flex,
   Heading,
-  Code,
   HStack,
-  Divider,
+  ListItem,
+  OrderedList,
+  Text,
   useBreakpointValue,
 } from '@chakra-ui/react'
-import { IconButtonOutgoingLink, OutgoingLink, Svg } from '@47ng/chakra-next'
+import React from 'react'
 import { FiGithub, FiTwitter } from 'react-icons/fi'
+import { Stats } from 'src/components/Stats'
 import { VercelDeployButton } from 'src/components/VercelDeployButton'
 
 export default function Home() {
@@ -171,6 +172,20 @@ export default function Home() {
           </OutgoingLink>
           .
         </Text>
+      </Container>
+      <Divider mt={12} />
+      <Container as="section" my={12}>
+        <Text
+          fontSize="sm"
+          textTransform="uppercase"
+          color="gray.500"
+          fontWeight="semibold"
+          textAlign="center"
+          mb={4}
+        >
+          Platform Stats
+        </Text>
+        <Stats />
       </Container>
       <Container as="footer" fontSize="sm" color="gray.500" my={8}>
         <Text textAlign="center">

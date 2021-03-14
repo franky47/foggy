@@ -17,12 +17,14 @@
     "@sentry/tracing": "^6.1.0",
     "framer-motion": "^3.2.2-rc.1",
     "got": "^11.8.2",
+    "ioredis": "^4.23.1",
     "next": "^10.0.7",
     "next-seo": "^4.20.0",
     "next-transpile-modules": "^6.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "swr": "^0.5.3"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
