@@ -15,7 +15,7 @@
     "@emotion/styled": "^11.3.0",
     "@sentry/node": "^6.3.5",
     "@sentry/tracing": "^6.3.5",
-    "framer-motion": "^3.10.6",
+    "framer-motion": "^4.1.11",
     "got": "^11.8.2",
     "ioredis": "^4.27.1",
     "next": "^10.2.0",
