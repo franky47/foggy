@@ -20,7 +20,7 @@
     "ioredis": "^4.27.6",
     "next": "^10.2.3",
     "next-seo": "^4.26.0",
-    "next-transpile-modules": "^6.4.1",
+    "next-transpile-modules": "^7.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
