@@ -83,7 +83,7 @@ export default function Home() {
       <Container as="section" maxW="3xl">
         <Svg
           viewBox="0 0 33.8556496484357 181.2801757144611"
-          width={[6, null, 8]}
+          width={[6, null, 8] as any}
           // height="181px"
           mx="auto"
         >

@@ -23,7 +23,8 @@ Sentry.init({
 
 // Example:
 // https://www.figma.com/file/LCzKwbepwQ5MaPwDJ8FCUsRo/francoisbest.com?node-id=301%3A7
-const FIGMA_REGEX = /^https:\/\/www\.figma\.com\/file\/([\w]*).+node-id=([\w%:]+)(\&.*)?$/
+const FIGMA_REGEX =
+  /^https:\/\/www\.figma\.com\/file\/([\w]*).+node-id=([\w%:]+)(\&.*)?$/
 
 export async function processFigmaURL(figmaURL: string) {
   const match = figmaURL.match(FIGMA_REGEX)
@@ -71,7 +72,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     Sentry.captureException(error)
     if (!res.headersSent) {
       res.status(400).json({
-        error: error.message,
+        error: error instanceof Error ? error.message : String(error),
       })
     }
   } finally {
