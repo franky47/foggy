@@ -975,10 +975,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.0.8":
-  version "18.0.8"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.8.tgz#a051eb380a9fbcaa404550543c58e1cf5ce4ab87"
-  integrity sha512-+j2hk9BzCOrrOSJASi5XiOyBbERk9jG5O73Ya4M0env5Ixi6vUNli4qy994AINcEF+1IEHISYFfIT4zwr++LKw==
+"@types/react@*", "@types/react@^18.0.9":
+  version "18.0.9"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.9.tgz#d6712a38bd6cd83469603e7359511126f122e878"
+  integrity sha512-9bjbg1hJHUm4De19L1cHiW0Jvx3geel6Qczhjd0qY5VKVE2X5+x77YxAepuCwVh4vrgZJdgEJw48zrhRIeF4Nw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1355,10 +1355,10 @@ invariant@^2.2.4:
   dependencies:
     loose-envify "^1.0.0"
 
-ioredis@^5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.0.4.tgz#0d4abfd818adfc5ef5029fddac4b8f503a1433b7"
-  integrity sha512-qFJw3MnPNsJF1lcIOP3vztbsasOXK3nDdNAgjQj7t7/Bn/w10PGchTOpqylQNxjzPbLoYDu34LjeJtSWiKBntQ==
+ioredis@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.0.5.tgz#94e51284631b30e15b359cd17de59c48945230fb"
+  integrity sha512-H+u9YB/cBckDO5lt5+S34gGN1EuIBjjaXk31LivQWfX3G1cqZPYCiwF9qCOkqK2NsKVk+saoUN+fLBz5tc2gFw==
   dependencies:
     "@ioredis/commands" "^1.1.1"
     cluster-key-slot "^1.1.0"
