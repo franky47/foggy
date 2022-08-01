@@ -958,10 +958,10 @@
     "@sentry/types" "6.19.7"
     tslib "^1.9.3"
 
-"@sindresorhus/is@^4.6.0":
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
-  integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
+"@sindresorhus/is@^5.2.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-5.3.0.tgz#0ec9264cf54a527671d990eb874e030b55b70dcc"
+  integrity sha512-CX6t4SYQ37lzxicAqsBtxA3OseeoVrh9cSJ5PFYam0GksYlupRfy1A+Q4aYD3zvcfECLc0zO2u+ZnR2UYKvCrw==
 
 "@swc/helpers@0.4.2":
   version "0.4.2"
@@ -1282,10 +1282,10 @@ focus-lock@^0.9.1:
   dependencies:
     tslib "^2.0.3"
 
-form-data-encoder@1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/form-data-encoder/-/form-data-encoder-1.7.1.tgz#ac80660e4f87ee0d3d3c3638b7da8278ddb8ec96"
-  integrity sha512-EFRDrsMm/kyqbTQocNvRXMLjc7Es2Vk+IQFx/YW7hkUH1eBl4J1fqiP34l74Yt0pFLCNpc06fkbVk00008mzjg==
+form-data-encoder@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/form-data-encoder/-/form-data-encoder-2.0.1.tgz#aec41860aca0275cb6026650d139c6701b0992c1"
+  integrity sha512-Oy+P9w5mnO4TWXVgUiQvggNKPI9/ummcSt5usuIV6HkaLKigwzPpoenhEqmGmx3zHqm6ZLJ+CR/99N8JLinaEw==
 
 framer-motion@^6.5.1:
   version "6.5.1"
@@ -1337,19 +1337,19 @@ get-stream@^6.0.1:
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
   integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
 
-got@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/got/-/got-12.1.0.tgz#099f3815305c682be4fd6b0ee0726d8e4c6b0af4"
-  integrity sha512-hBv2ty9QN2RdbJJMK3hesmSkFTjVIHyIDDbssCKnSmq62edGgImJWD10Eb1k77TiV1bxloxqcFAVK8+9pkhOig==
+got@^12.3.0:
+  version "12.3.0"
+  resolved "https://registry.yarnpkg.com/got/-/got-12.3.0.tgz#744625bcb072e7b1fd41a706e0af2bd1f73a2c64"
+  integrity sha512-7uK06aluHF0UibYFBX3lFUZ2FG/W0KS4O4EqAIrbWIdbPxIT33r6ZJy7Zy+pdh0CP/ZbF3zBa7Fd9dCn7vGPBg==
   dependencies:
-    "@sindresorhus/is" "^4.6.0"
+    "@sindresorhus/is" "^5.2.0"
     "@szmarczak/http-timer" "^5.0.1"
     "@types/cacheable-request" "^6.0.2"
     "@types/responselike" "^1.0.0"
     cacheable-lookup "^6.0.4"
     cacheable-request "^7.0.2"
     decompress-response "^6.0.0"
-    form-data-encoder "1.7.1"
+    form-data-encoder "^2.0.1"
     get-stream "^6.0.1"
     http2-wrapper "^2.1.10"
     lowercase-keys "^3.0.0"
@@ -1421,10 +1421,10 @@ invariant@^2.2.4:
   dependencies:
     loose-envify "^1.0.0"
 
-ioredis@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.1.0.tgz#17bc0bc40f164ef26910ca6e56981c2a9bfdf57e"
-  integrity sha512-HYHnvwxFwefeUBj0hZFejLvd8Q/YNAfnZlZG/hSRxkRhXMs1H8soMEVccHd1WlLrKkynorXBsAtqDGskOdAfVQ==
+ioredis@^5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.2.2.tgz#212467e04f6779b4e0e800cece7bb7d3d7b546d2"
+  integrity sha512-wryKc1ur8PcCmNwfcGkw5evouzpbDXxxkMkzPK8wl4xQfQf7lHe11Jotell5ikMVAtikXJEu/OJVaoV51BggRQ==
   dependencies:
     "@ioredis/commands" "^1.1.1"
     cluster-key-slot "^1.1.0"
@@ -1537,10 +1537,10 @@ nanoid@^3.1.30:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.3.tgz#fd8e8b7aa761fe807dba2d1b98fb7241bb724a25"
   integrity sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==
 
-next-seo@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.4.0.tgz#37a7784b30b3f70cec3fa0d77f9dde5990822d24"
-  integrity sha512-R9DhajPwJnR/lsF2hZ8cN8uqr5CVITsRrCG1AF5+ufcaybKYOvnH8sH9MaH4/hpkps3PQ9H71S7J7SPYixAYzQ==
+next-seo@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.5.0.tgz#12bdfce60a6ae098f49617357a166c2d44dbc29e"
+  integrity sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==
 
 next-transpile-modules@^9.0.0:
   version "9.0.0"
