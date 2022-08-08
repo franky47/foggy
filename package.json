@@ -11,8 +11,8 @@
   "dependencies": {
     "@47ng/chakra-next": "^3.0.0-beta.5",
     "@chakra-ui/react": "^1.8.8",
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
     "@sentry/node": "^6.19.7",
     "@sentry/tracing": "^6.19.7",
     "framer-motion": "^6.5.1",
