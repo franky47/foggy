@@ -10,15 +10,15 @@
   },
   "dependencies": {
     "@47ng/chakra-next": "^3.0.0-beta.5",
-    "@chakra-ui/react": "^1.8.8",
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@sentry/node": "^6.19.7",
-    "@sentry/tracing": "^6.19.7",
-    "framer-motion": "^6.5.1",
-    "got": "^12.3.1",
-    "ioredis": "^5.2.2",
-    "next": "^12.2.4",
+    "@chakra-ui/react": "^2.3.2",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@sentry/node": "^7.12.1",
+    "@sentry/tracing": "^7.12.1",
+    "framer-motion": "^7.3.2",
+    "got": "^12.4.1",
+    "ioredis": "^5.2.3",
+    "next": "^12.2.5",
     "next-seo": "^5.5.0",
     "next-transpile-modules": "^9.0.0",
     "react": "^18.2.0",
@@ -28,9 +28,11 @@
   },
   "devDependencies": {
     "@types/ioredis": "^4.28.10",
-    "@types/node": "^18.0.3",
-    "@types/react": "^18.0.17",
+    "@types/node": "^18.7.16",
+    "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
-    "typescript": "^4.7.4"
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
+    "typescript": "^4.8.2"
   }
 }

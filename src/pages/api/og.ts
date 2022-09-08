@@ -48,7 +48,10 @@ export async function processFigmaURL(figmaURL: string) {
 
 // --
 
-export default async function (req: NextApiRequest, res: NextApiResponse) {
+export default async function generateOpenGraphImage(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const tick = performance.now()
   const url = req.query.url as string
   const tx = Sentry.startTransaction({
